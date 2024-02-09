@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import Backdrop from "./Backdrop";
 import Button from "./Button";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   const [background, setBackground] = useState("mocha.gif"); // Set initial state to a default gif
@@ -28,6 +30,20 @@ function App() {
       <Backdrop src={background} alt="" />
       <h1>Will you be my valentine?</h1>
       <Button onYesClick={handleYesClick} onNoClick={handleNoClick} />
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
 }
